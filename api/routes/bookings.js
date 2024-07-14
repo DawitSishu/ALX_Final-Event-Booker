@@ -96,10 +96,10 @@ router.get("/:bookingId", checkAuth, (req, res, next) => {
       }
       res.status(200).json({
         booking: booking,
-        // request: {
-        //     type: "GET",
-        //     url: "http://localhost:3000/bookings",
-        // },
+        request: {
+            type: "GET",
+            url: "http://localhost:3000/bookings",
+        },
       });
     })
     .catch((err) => {
