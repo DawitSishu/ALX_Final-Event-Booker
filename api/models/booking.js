@@ -8,7 +8,6 @@ const bookingSchema = mongoose.Schema({
         required: true,
     },
     booking_date: { type: String, required: true },
-    status : { type: String, required: true},
 
 }, { timestamps: true});
 
