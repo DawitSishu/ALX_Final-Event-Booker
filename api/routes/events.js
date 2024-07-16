@@ -171,11 +171,11 @@ router.delete("/:eventId", checkAuth, (req, res, next) => {
                 description: "Create a new event",
                 url: "http://localhost:3000/events",
                 body: {
-                  title: "String",
-                  description: "String",
-                  date: "String",
-                  location: "String",
-                  capacity: "Number",
+                  title: "N/A",
+                  description: "N/A",
+                  date: "N/A",
+                  location: "N/A",
+                  capacity: "N/A",
                 },
               },
             });

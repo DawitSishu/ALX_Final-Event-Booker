@@ -22,7 +22,6 @@ router.post("/", checkAuth, (req, res, next) => {
         _id: new mongoose.Types.ObjectId(),
         event: req.body.event,
         booking_date: req.body.booking_date,
-        status: req.body.status,
       });
       return booking
         .save()
@@ -34,7 +33,6 @@ router.post("/", checkAuth, (req, res, next) => {
               _id: result._id,
               event: result.event,
               booking_date: result.booking_date,
-              status: result.status,
               createdAt: result.createdAt,
               updatedAt: result.updatedAt,
               request: {
@@ -67,7 +65,6 @@ router.get("/", checkAuth, (req, res, next) => {
             _id: doc._id,
             event: doc.event,
             booking_date: doc.booking_date,
-            status: doc.status,
             createdAt: doc.createdAt,
             updatedAt: doc.updatedAt,
             request: {
@@ -99,10 +96,10 @@ router.get("/:bookingId", checkAuth, (req, res, next) => {
       }
       res.status(200).json({
         booking: booking,
-        // request: {
-        //     type: "GET",
-        //     url: "http://localhost:3000/bookings",
-        // },
+        request: {
+            type: "GET",
+            url: "http://localhost:3000/bookings",
+        },
       });
     })
     .catch((err) => {
@@ -124,7 +121,6 @@ router.put("/:bookingId", checkAuth, (req, res, next) => {
         { _id: id },
         {
           $set: {
-            status: req.body.status,
             booking_date: req.body.booking_date,
             event: req.body.event,
           },
@@ -168,9 +164,8 @@ router.delete("/:bookingId", checkAuth, (req, res, next) => {
                 type: "POST",
                 url: "http://localhost:3000/bookings",
                 body: {
-                  eventId: "ID",
-                  booking_date: "Date",
-                  status: "String",
+                  eventId: "N/A",
+                  booking_date: "N/A",
                 },
               },
             });
