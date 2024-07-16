@@ -7,7 +7,7 @@
     "test": "mocha",
     "start": "nodemon server.js"
   },
-  "author": "Dagim Fikru",
+  "author": "dawit sishu and hailegnaw tadiwos",
   "license": "ISC",
   "dependencies": {
     "bcrypt": "^5.1.1",
