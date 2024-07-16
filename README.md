@@ -1,4 +1,4 @@
-ALX Final Event Booker
+#ALX Final Event Booker
 
 The ALX Final Event Booker is a backend application designed to facilitate the booking of events, such as appointments for various services. This project is built using Node.js, Express.js, and MongoDB, and it provides a robust API for managing bookings, including creating, reading, updating, and deleting booking records.
 
